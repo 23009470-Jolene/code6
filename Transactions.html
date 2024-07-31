@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar Styles */
+        header {
+            background-color: #003366;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        /* Container Styles */
+        .container {
+            margin-top: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        .list-group-item {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            margin-top: 10px;
+        }
+
+        .mx-2 {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"> Logo</div>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Wallet.html">Wallet</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Transactions.html">Transactions</a></li>
+                <li><a href="Shared.html">Goals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="text-center">Transaction History</h1>
+        <ul class="list-group mt-4">
+            <li class="list-group-item">
+                <strong>Date:2024/2/22</strong><br>
+                <strong>Amount:</strong>$1000<br>
+                <strong>Description:</strong>transfer<br>
+                <form action="/transactions/<%= transaction.id %>" method="POST">
+                    <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="list-group mt-4">
+            <li class="list-group-item">
+                <strong>Date:2024/2/23</strong><br>
+                <strong>Amount:</strong>-$1000<br>
+                <strong>Description:</strong>transfer<br>
+                <form action="/transactions/<%= transaction.id %>" method="POST">
+                    <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
